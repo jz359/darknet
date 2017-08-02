@@ -6,7 +6,7 @@ count=0
 for f in $FRAMES
 do
 	echo "processing $f file"
-	./darknet detect cfg/yolo.cfg yolo.weights ./frames/$f
+	./darknet detect cfg/yolo.cfg yolo.weights $f
 	rename="frame"
 	rename="$rename$count"
 	count=$((count+1))
