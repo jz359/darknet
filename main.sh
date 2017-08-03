@@ -10,5 +10,5 @@ do
 	rename="frame"
 	rename="$rename$count"
 	count=$((count+1))
-	#mv "./predictions.png" "./$rename.png"
+	mv "./predictions.png" "./$rename.png"
 done
