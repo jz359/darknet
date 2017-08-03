@@ -3,7 +3,7 @@
 
 FRAMES=./frames/*
 count=0
-./darknet detect cfg/yolo.cfg yolo.weights
+./darknet detect ./cfg/yolo.cfg ./yolo.weights
 for f in $FRAMES
 do
 	$f
