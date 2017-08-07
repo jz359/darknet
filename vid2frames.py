@@ -1,11 +1,14 @@
 import cv2
 import argparse
 import os
+import sys
 
 def main(args):
 	video_capture = cv2.VideoCapture(args.input_video)
 	framepath = os.path.basename(args.input_video)
-	name, ext = framepath.split('.')
+	names = framepath.split('.')
+	print(names)
+	name = names[0]
 	dir_name = name
 
 	if not os.path.exists('/data/yolo_movies/'+dir_name+'/'):
@@ -24,6 +27,8 @@ def main(args):
 	    else:
 	        break
 	video_capture.release()
+
+	print(count)
 
 
 def parse_arguments(argv):
