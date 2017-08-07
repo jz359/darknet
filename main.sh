@@ -14,7 +14,7 @@ do
 		FRAMEPATH="${f%%.*}/"
 		echo "the path we're writing frames to $FRAMEPATH"
 
-		for img in $FRAMEPATH
+		for img in $FRAMEPATH*
 		do
 			./darknet detect cfg/yolo.cfg yolo.weights $img
 			rename="output"
